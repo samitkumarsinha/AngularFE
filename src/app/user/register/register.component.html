@@ -1,0 +1,7 @@
+<app-header></app-header>
+<form [formGroup]="regform" (ngSubmit) = "onregister()">
+  <p>Username <input type="text" formControlName="username"></p>
+  <p>Email <input type="text" formControlName="email"></p>
+  <p>Password <input type="text" formControlName="password"></p>
+  <p><button type="submit" [disabled]="!regform.valid">Register</button></p>
+</form>

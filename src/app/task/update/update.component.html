@@ -1,0 +1,5 @@
+<form [formGroup]="updateform" (ngSubmit)="onsubmit()">
+  <p>Task <input type="text"  formControlName="task_name"></p>
+  <p>Completed <input type="text"  formControlName="completed"></p>
+  <p><button type="submit">Update</button></p>
+  </form>

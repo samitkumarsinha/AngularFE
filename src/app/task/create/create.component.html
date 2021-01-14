@@ -1,0 +1,7 @@
+<app-header></app-header>
+<form [formGroup]="createform" (ngSubmit)="onsubmit()">
+<p>TaskName <input type="text" formControlName="taskname"></p>
+<p>Completed <input type="text" formControlName="completed"></p>
+<p><button type="submit" [disabled] = "!createform.valid">Create</button></p>
+</form>
+

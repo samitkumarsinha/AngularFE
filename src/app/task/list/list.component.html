@@ -1,0 +1,13 @@
+<app-header></app-header>
+  <div *ngFor="let item of tasks">
+    <app-card [task]="item" (details)="details($event)"></app-card>
+    <p (click) = "del(item)">X</p>
+    <p (click) = "edit(item)">EDIT</p>
+  </div>
+
+<div *ngIf="records">
+  {{records.task_name}} {{records.created_at}}
+</div>
+<div *ngIf="editrec">
+  <app-update [task] = "editrec" (list)="showlist()"></app-update>
+</div>

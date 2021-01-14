@@ -1,0 +1,6 @@
+<app-header></app-header>
+<form [formGroup]="loginform" (ngSubmit)="onsubmit()">
+<p>username <input type="text" formControlName="username"></p>
+<p>password <input type="text" formControlName="password"></p>
+<p><button type="submit" [disabled] = "!loginform.valid">Login</button></p>
+</form>
